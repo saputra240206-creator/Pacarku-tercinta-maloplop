@@ -1,18 +1,11 @@
-const openBtn = document.getElementById("openBtn");
-const letter = document.getElementById("letter");
-const music = document.getElementById("music");
+window.onload = function () {
+    const openBtn = document.getElementById("openBtn");
+    const letter = document.getElementById("letter");
 
-openBtn.addEventListener("click", () => {
-    letter.classList.remove("hidden");
-    openBtn.style.display = "none";
+    openBtn.onclick = function () {
+        alert("KEPENCET!");
 
-    if (music) {
-        music.play().catch(() => {
-            console.log("Browser memblokir autoplay.");
-        });
-    }
-
-    letter.scrollIntoView({
-        behavior: "smooth"
-    });
-});
+        letter.style.display = "block";
+        openBtn.style.display = "none";
+    };
+};
